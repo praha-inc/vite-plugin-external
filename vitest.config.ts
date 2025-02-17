@@ -5,5 +5,13 @@ export default defineConfig({
     mockReset: true,
     clearMocks: true,
     restoreMocks: true,
+    server: {
+      deps: {
+        inline: [
+          'find-up',
+          'locate-path',
+        ],
+      },
+    },
   },
 });

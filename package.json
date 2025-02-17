@@ -19,6 +19,9 @@
   "license": "MIT",
   "author": "PrAha inc.",
   "type": "module",
+  "imports": {
+    "#package.json": "./package.json"
+  },
   "exports": {
     "require": {
       "types": "./dist/cjs/index.d.ts",
@@ -58,10 +61,16 @@
     "@praha/eslint-config-typescript": "3.0.2",
     "@rslib/core": "0.5.1",
     "@tsconfig/strictest": "2.0.5",
+    "@types/node": "22.13.4",
     "eslint": "9.20.1",
+    "memfs": "4.17.0",
     "pkg-pr-new": "0.0.39",
     "typescript": "5.7.3",
+    "vite": "6.1.0",
     "vitest": "3.0.5"
+  },
+  "peerDependencies": {
+    "vite": "^6.0.0"
   },
   "packageManager": "pnpm@10.4.1",
   "publishConfig": {
