@@ -10,6 +10,13 @@ export default defineConfig({
     },
     tsconfigPath: './tsconfig.build.json',
   },
+  output: {
+    // NOTE: This is a workaround for the following issue.
+    // @see: https://github.com/web-infra-dev/rslib/issues/759
+    externals: [
+      'find-up',
+    ],
+  },
   lib: [
     {
       format: 'cjs',
