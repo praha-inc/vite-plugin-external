@@ -19,7 +19,7 @@ describe('readPackageJson', () => {
     vol.reset();
   });
 
-  it('should return the parsed package.json', async () => {
+  it('should return the parsed package.json', () => {
     vol.fromJSON({
       './package.json': '{"name": "test", "version": "1.0.0", "dependencies": { "dep": "1.0.0" } }',
     });
