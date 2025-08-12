@@ -1,6 +1,6 @@
 {
   "name": "@praha/vite-plugin-external",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Vite plugin that automatically excludes Node.js built-in modules and npm dependencies from the bundle",
   "keywords": [
     "javascript",
