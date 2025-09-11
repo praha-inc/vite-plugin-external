@@ -65,7 +65,7 @@
     "eslint": "9.35.0",
     "memfs": "4.39.0",
     "pkg-pr-new": "0.0.59",
-    "typescript": "5.7.3",
+    "typescript": "5.9.2",
     "vite": "7.1.5",
     "vitest": "3.2.4"
   },
