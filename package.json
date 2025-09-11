@@ -63,7 +63,7 @@
     "@tsconfig/strictest": "2.0.5",
     "@types/node": "22.18.1",
     "eslint": "9.35.0",
-    "memfs": "4.38.3",
+    "memfs": "4.39.0",
     "pkg-pr-new": "0.0.59",
     "typescript": "5.7.3",
     "vite": "7.1.5",
