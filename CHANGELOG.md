@@ -1,5 +1,11 @@
 # @praha/vite-plugin-external
 
+## 1.1.1
+
+### Patch Changes
+
+- [#200](https://github.com/praha-inc/vite-plugin-external/pull/200) [`bbcc07a`](https://github.com/praha-inc/vite-plugin-external/commit/bbcc07a47286739988a596632eaaeebdf45b7fcd) Thanks [@Karibash](https://github.com/Karibash)! - Add file extensions to import paths in TypeScript declaration files
+
 ## 1.1.0
 
 ### Minor Changes
