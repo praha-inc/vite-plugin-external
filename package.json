@@ -61,7 +61,7 @@
     "@praha/eslint-config-typescript": "3.0.9",
     "@rslib/core": "0.15.0",
     "@tsconfig/strictest": "2.0.6",
-    "@types/node": "22.18.9",
+    "@types/node": "22.18.10",
     "eslint": "9.37.0",
     "memfs": "4.49.0",
     "pkg-pr-new": "0.0.60",
