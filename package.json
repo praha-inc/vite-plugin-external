@@ -62,7 +62,7 @@
     "@rslib/core": "0.18.4",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "22.19.2",
-    "eslint": "9.39.1",
+    "eslint": "9.39.2",
     "memfs": "4.51.1",
     "pkg-pr-new": "0.0.62",
     "typescript": "5.9.3",
