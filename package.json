@@ -72,7 +72,7 @@
   "peerDependencies": {
     "vite": "^6.0.0 || ^7.0.0"
   },
-  "packageManager": "pnpm@10.29.2",
+  "packageManager": "pnpm@10.29.3",
   "publishConfig": {
     "provenance": true
   }
