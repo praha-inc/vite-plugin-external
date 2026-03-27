@@ -1,5 +1,11 @@
 # @praha/vite-plugin-external
 
+## 1.2.0
+
+### Minor Changes
+
+- [#341](https://github.com/praha-inc/vite-plugin-external/pull/341) [`ad233a4`](https://github.com/praha-inc/vite-plugin-external/commit/ad233a4476fd1a936b38804d57d469c377f29dee) Thanks [@renovate](https://github.com/apps/renovate)! - Update vite peer dependency range to >=6.0.0
+
 ## 1.1.1
 
 ### Patch Changes
