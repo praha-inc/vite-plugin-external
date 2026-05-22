@@ -64,7 +64,7 @@
     "@types/node": "24.12.4",
     "eslint": "9.39.4",
     "memfs": "4.57.2",
-    "pkg-pr-new": "0.0.73",
+    "pkg-pr-new": "0.0.74",
     "typescript": "5.9.3",
     "vite": "8.0.13",
     "vitest": "4.1.6"
