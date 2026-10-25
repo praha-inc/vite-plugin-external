@@ -24,7 +24,7 @@ To use `@praha/vite-plugin-external`, import and add it to the plugins array in 
 By default, this plugin will exclude:
 
 - Node.js built-in modules
-- Dependencies listed in package.json
+- `dependencies`, `peerDependencies` and `optionalDependencies` listed in package.json
 
 ```ts
 import { externalPlugin } from '@praha/vite-plugin-external';

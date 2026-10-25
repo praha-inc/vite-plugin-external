@@ -109,4 +109,17 @@ describe('externalPlugin', () => {
 
     expect(result).toBe(false);
   });
+
+  it('should externalize the package specified in the peerDependencies', async () => {
+    vol.fromJSON({ './package.json': JSON.stringify({ peerDependencies: { 'some-package': '^1.0.0' } }) });
+    const plugin = externalPlugin();
+
+    // @ts-ignore
+    await plugin.buildStart();
+    // @ts-ignore
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const result = await plugin.resolveId('some-package', undefined, { isEntry: false });
+
+    expect(result).toBe(false);
+  });
 });

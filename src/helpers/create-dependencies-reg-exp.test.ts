@@ -46,4 +46,18 @@ describe('createDependenciesRegExp', () => {
     expect(regex!.test('dep2')).toBe(false);
     expect(regex!.test('dep3')).toBe(false);
   });
+
+  it('should return a regex that matches peerDependencies and optionalDependencies', () => {
+    const packageJson: PackageJson = {
+      ...basePackageJson,
+      peerDependencies: { peer1: '1.0.0' },
+      optionalDependencies: { optional1: '1.0.0' },
+    };
+
+    const regex = createDependenciesRegExp(packageJson);
+
+    expect(regex!.test('peer1')).toBe(true);
+    expect(regex!.test('optional1/subpath')).toBe(true);
+    expect(regex!.test('other')).toBe(false);
+  });
 });
