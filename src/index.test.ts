@@ -99,7 +99,7 @@ describe('externalPlugin', () => {
   });
 
   it('should externalize the package specified in the dependencies', async () => {
-    vol.fromJSON({ './package.json': JSON.stringify({ dependencies: { 'some-package': '1.0.0' } }) });
+    vol.fromJSON({ './package.json': JSON.stringify({ dependencies: { 'some-package': '1.0.0' } }) }, process.cwd());
     const plugin = externalPlugin();
 
     // @ts-ignore
