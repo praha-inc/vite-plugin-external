@@ -33,7 +33,6 @@ describe('externalPlugin', () => {
     const plugin = externalPlugin();
 
     // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await plugin.resolveId('./relative/path', undefined, { isEntry: false });
 
     expect(result).toBeNull();
@@ -44,7 +43,6 @@ describe('externalPlugin', () => {
 
     const absolutePath = path.resolve('absolute/path');
     // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await plugin.resolveId(absolutePath, undefined, { isEntry: false });
 
     expect(result).toBeNull();
@@ -54,7 +52,6 @@ describe('externalPlugin', () => {
     const plugin = externalPlugin();
 
     // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await plugin.resolveId('some-package', undefined, { isEntry: true });
 
     expect(result).toBeNull();
@@ -64,7 +61,6 @@ describe('externalPlugin', () => {
     const plugin = externalPlugin();
 
     // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await plugin.resolveId('node:fs', undefined, { isEntry: false });
 
     expect(result).toBe(false);
@@ -76,7 +72,6 @@ describe('externalPlugin', () => {
     });
 
     // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await plugin.resolveId('some-package', undefined, { isEntry: false });
 
     expect(result).toBe(false);
@@ -89,7 +84,6 @@ describe('externalPlugin', () => {
     });
 
     // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await plugin.resolveId!('some-lib', undefined, { isEntry: false });
 
     expect(result).toBeNull();
@@ -99,7 +93,6 @@ describe('externalPlugin', () => {
     const plugin = externalPlugin();
 
     // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await plugin.resolveId('some-package', undefined, { isEntry: false });
 
     expect(result).toBeNull();
@@ -112,7 +105,6 @@ describe('externalPlugin', () => {
     // @ts-ignore
     await plugin.buildStart();
     // @ts-ignore
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const result = await plugin.resolveId('some-package', undefined, { isEntry: false });
 
     expect(result).toBe(false);
