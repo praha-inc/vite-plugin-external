@@ -1,5 +1,15 @@
 # @praha/vite-plugin-external
 
+## 1.3.0
+
+### Minor Changes
+
+- [#482](https://github.com/praha-inc/vite-plugin-external/pull/482) [`8ff715b`](https://github.com/praha-inc/vite-plugin-external/commit/8ff715b2a5d38c1cebb737e5251a584b05d81d6e) Thanks [@mridang](https://github.com/mridang)! - Externalize `peerDependencies` and `optionalDependencies` in addition to `dependencies`
+
+### Patch Changes
+
+- [#482](https://github.com/praha-inc/vite-plugin-external/pull/482) [`953f782`](https://github.com/praha-inc/vite-plugin-external/commit/953f78263dab48b018d1b204d9e3f1bd0c146ed9) Thanks [@mridang](https://github.com/mridang)! - Escape regular expression special characters in package names so that dependencies such as `lodash.get` are matched literally
+
 ## 1.2.0
 
 ### Minor Changes
