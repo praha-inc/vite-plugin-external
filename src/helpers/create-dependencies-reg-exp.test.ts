@@ -60,4 +60,17 @@ describe('createDependenciesRegExp', () => {
     expect(regex!.test('optional1/subpath')).toBe(true);
     expect(regex!.test('other')).toBe(false);
   });
+
+  it('should not duplicate names listed in multiple dependency fields', () => {
+    const packageJson: PackageJson = {
+      ...basePackageJson,
+      dependencies: { dep1: '1.0.0' },
+      peerDependencies: { dep1: '1.0.0', peer1: '1.0.0' },
+      optionalDependencies: { peer1: '1.0.0' },
+    };
+
+    const regex = createDependenciesRegExp(packageJson);
+
+    expect(regex!.source).toBe(String.raw`^(dep1|peer1)(?:\/.+)?$`);
+  });
 });
