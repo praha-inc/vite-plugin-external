@@ -121,4 +121,16 @@ describe('externalPlugin', () => {
 
     expect(result).toBe(false);
   });
+
+  it('should externalize the package specified in the optionalDependencies', async () => {
+    vol.fromJSON({ './package.json': JSON.stringify({ optionalDependencies: { 'some-package': '^1.0.0' } }) }, process.cwd());
+    const plugin = externalPlugin();
+
+    // @ts-ignore
+    await plugin.buildStart();
+    // @ts-ignore
+    const result = await plugin.resolveId('some-package', undefined, { isEntry: false });
+
+    expect(result).toBe(false);
+  });
 });
