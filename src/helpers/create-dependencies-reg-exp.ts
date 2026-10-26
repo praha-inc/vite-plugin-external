@@ -7,5 +7,5 @@ export const createDependenciesRegExp = (packageJson: PackageJson): RegExp | und
     ...Object.keys(packageJson.optionalDependencies ?? {}),
   ]);
   if (names.size <= 0) return;
-  return new RegExp(`^(${Array.from(names).join('|')})(?:/.+)?$`);
+  return new RegExp(`^(${Array.from(names, (name) => RegExp.escape(name)).join('|')})(?:/.+)?$`);
 };

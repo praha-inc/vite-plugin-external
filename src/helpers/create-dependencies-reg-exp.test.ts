@@ -71,6 +71,24 @@ describe('createDependenciesRegExp', () => {
 
     const regex = createDependenciesRegExp(packageJson);
 
-    expect(regex!.source).toBe(String.raw`^(dep1|peer1)(?:\/.+)?$`);
+    expect(regex!.source).toBe(String.raw`^(${RegExp.escape('dep1')}|${RegExp.escape('peer1')})(?:\/.+)?$`);
+  });
+
+  it('should match package names containing special characters literally', () => {
+    const packageJson: PackageJson = {
+      ...basePackageJson,
+      dependencies: {
+        'lodash.get': '1.0.0',
+        'c++': '1.0.0',
+      },
+    };
+
+    const regex = createDependenciesRegExp(packageJson);
+
+    expect(regex!.test('lodash.get')).toBe(true);
+    expect(regex!.test('lodash.get/subpath')).toBe(true);
+    expect(regex!.test('lodashXget')).toBe(false);
+    expect(regex!.test('c++')).toBe(true);
+    expect(regex!.test('c')).toBe(false);
   });
 });
