@@ -60,7 +60,7 @@
     "@types/node": "24.19.2",
     "memfs": "4.80.0",
     "oxlint": "1.90.0",
-    "oxlint-tsgolint": "7.0.2005",
+    "oxlint-tsgolint": "7.0.2006",
     "pkg-pr-new": "0.0.93",
     "typescript": "7.0.2",
     "vite": "8.3.5",
