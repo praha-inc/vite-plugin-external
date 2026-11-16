@@ -58,7 +58,7 @@
     "@rslib/core": "1.0.7",
     "@tsconfig/strictest": "2.0.9",
     "@types/node": "24.19.2",
-    "memfs": "4.80.0",
+    "memfs": "4.80.1",
     "oxlint": "1.93.0",
     "oxlint-tsgolint": "7.0.2006",
     "pkg-pr-new": "0.0.93",
